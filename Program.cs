@@ -43,22 +43,47 @@ void LearningActivity32()
 {
     string[] names = new string[14];
     int[] ages = new int[14];
-    string[] wonders = {"Great Wall of China","Petra","Colosseum","Chichen Itza","Machi Picchu","Taj Mahal","Christ the Redeemer"};
+    string[] wonders = {"the Great Wall of China","Petra","Colosseum","Chichen Itza","Machi Picchu","Taj Mahal","Christ the Redeemer"};
     for (int i = 0; i < wonders.Length; i++)
     {
-        Console.WriteLine("the " + i + 1 + " wonder of the world is" + wonders[i]);
+        Console.WriteLine("the " + (i + 1) + " wonder of the world is " + wonders[i]);
     }
 }
 void LearningActivity33()
 {
-    Console.WriteLine("This is the function for Learning Activity 3.3!");
+    Random rand = new Random();
+    int[,] board = new int[3,3];
+    for (int i = 0;i < 3;i++)
+    {
+        Console.WriteLine();
+        for (int j = 0; j < 3;j++)
+        {
+            board[i,j] = rand.Next(0, 2);
+            if (board[i,j] == 1)
+            {
+                Console.Write("X  ");
+            }
+            else if (board[i,j] == 2)
+            {
+                Console.Write("Y  ");
+            }
+            else
+            {
+                Console.Write("_  ");
+            }
+        }
+    }
 }
 
 void LearningActivity34()
 {
     int number;
-    bool success = int.TryParse(Console.ReadLine(), out number); //example code
-    Console.WriteLine("This is the function for Learning Activity 3.4!");
+    do
+    {
+        number = interagerInput("Please enter your age");
+    } while (number > 9 && number < 51);
+    Console.WriteLine("Took you long enough to enter " + number + "...");
+    
 }
 
 void LearningActivity35()
