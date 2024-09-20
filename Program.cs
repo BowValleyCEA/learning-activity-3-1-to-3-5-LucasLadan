@@ -2,11 +2,11 @@
 using System.Net;
 using static System.Net.Mime.MediaTypeNames;
 
-//LearningActivity31();
-//LearningActivity32();
+LearningActivity31();
+LearningActivity32();
 LearningActivity33();
-//LearningActivity34();
-//LearningActivity35();
+LearningActivity34();
+LearningActivity35();
 
 int interagerInput(string prompt)//This is to make sure that the entered number is a valid interager
 {
